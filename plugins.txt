@@ -1,4 +1,5 @@
 git-client:1.19.0
+gitub-api:1.71
 ssh-credentials:1.11
 credentials:1.24
 github:1.14.0
