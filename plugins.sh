@@ -25,4 +25,9 @@ while read spec || [ -n "$spec" ]; do
     fi
     curl -sSL -f ${JENKINS_UC_DOWNLOAD}/plugins/${plugin[0]}/${plugin[1]}/${plugin[0]}.hpi -o $REF/${plugin[0]}.jpi
     unzip -qqt $REF/${plugin[0]}.jpi
+    
 done  < $1
+
+curl -sSl -f https://help.rallydev.com/sites/default/files/multimedia/jenkins-ca-agile-central-build-publisher-4.0.0.zip -o $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
+unzip -qqt $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
+
