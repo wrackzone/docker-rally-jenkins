@@ -12,12 +12,13 @@ set -e
 
 REF=/usr/share/jenkins/ref/plugins
 mkdir -p $REF
-curl -sSL https://github.com/wrackzone/docker-rally-jenkins/raw/master/hpi/ruby-runtime-ca-agile-central-0.0.2.hpi -o $REF/ruby-runtime-ca-agile-central-0.0.2.hpi
-curl -sSL https://github.com/wrackzone/docker-rally-jenkins/raw/master/hpi/jenkins-ca-agile-central-build-publisher-1.0.0.hpi -o $REF/jenkins-ca-agile-central-build-publisher-1.0.0.hpi
 
 echo "installing plugins"
 
 while read spec || [ -n "$spec" ]; do
+    curl -sSL https://github.com/wrackzone/docker-rally-jenkins/raw/master/hpi/ruby-runtime-ca-agile-central-0.0.2.hpi -o $REF/ruby-runtime-ca-agile-central-0.0.2.hpi
+    curl -sSL https://github.com/wrackzone/docker-rally-jenkins/raw/master/hpi/jenkins-ca-agile-central-build-publisher-1.0.0.hpi -o $REF/jenkins-ca-agile-central-build-publisher-1.0.0.hpi
+
     plugin=(${spec//:/ });
     [[ ${plugin[0]} =~ ^# ]] && continue
     [[ ${plugin[0]} =~ ^\s*$ ]] && continue
