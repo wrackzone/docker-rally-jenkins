@@ -8,7 +8,7 @@
 # RUN /usr/local/bin/plugins.sh /plugins.txt
 #
 
-set -e
+# set -e
 
 REF=/usr/share/jenkins/ref/plugins
 mkdir -p $REF
