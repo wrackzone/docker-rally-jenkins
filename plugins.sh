@@ -28,6 +28,7 @@ while read spec || [ -n "$spec" ]; do
     
 done  < $1
 
-curl -sSl -f https://help.rallydev.com/sites/default/files/multimedia/jenkins-ca-agile-central-build-publisher-4.0.0.zip -o $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
-unzip -qqt $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
+#curl -sSl -f https://help.rallydev.com/sites/default/files/multimedia/jenkins-ca-agile-central-build-publisher-4.0.0.zip -o $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
+#unzip -qqt $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
+mv /usr/share/jenkins/ref/*.hpi $REF
 
