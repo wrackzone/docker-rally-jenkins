@@ -12,6 +12,7 @@ set -e
 
 REF=/usr/share/jenkins/ref/plugins
 mkdir -p $REF
+mv /usr/share/jenkins/ref/*.hpi $REF/*
 
 while read spec || [ -n "$spec" ]; do
     plugin=(${spec//:/ });
@@ -30,7 +31,5 @@ done  < $1
 
 #curl -sSl -f https://help.rallydev.com/sites/default/files/multimedia/jenkins-ca-agile-central-build-publisher-4.0.0.zip -o $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
 #unzip -qqt $REF/jenkins-ca-agile-central-build-publisher-4.0.0.zip
-mv /usr/share/jenkins/ref/*.hpi $REF
-ls $REF
 
 
