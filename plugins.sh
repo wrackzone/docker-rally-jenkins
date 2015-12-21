@@ -11,7 +11,7 @@
 set -e
 
 REF=/usr/share/jenkins/ref/plugins
-mkdir -p $REF
+# mkdir -p $REF
 
 while read spec || [ -n "$spec" ]; do
     plugin=(${spec//:/ });
