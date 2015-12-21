@@ -12,7 +12,8 @@ set -e
 
 REF=/usr/share/jenkins/ref/plugins
 mkdir -p $REF
-mv /usr/share/jenkins/ref/*.hpi $REF/*
+cp /usr/share/jenkins/ref/*.hpi $REF/*
+echo 'installing plugins'
 
 while read spec || [ -n "$spec" ]; do
     plugin=(${spec//:/ });
